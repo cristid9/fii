@@ -1,0 +1,6 @@
+Sa consideram C un cuvânt format numai din litere ale alfabetului englez.
+O anagrama a cuvântului C este un cuvânt format din literele lui C considerate într-o alta ordine.
+De exemplu, "armata" este o anagramã a cuvântului "tamara".
+Totusi, "armata" este o anagramã a cuvântului "armata".
+Dar cuvântul "maree" nu este o anagrama a cuvântului "amare".
+
