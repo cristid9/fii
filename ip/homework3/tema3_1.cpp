@@ -10,7 +10,7 @@ int compare_files(const char *input_file_1, const char *input_file_2)
 
     streamsize file_size = file1.tellg();
     if (file_size != file2.tellg())
-        return 0;
+        return 1;
 
     file1.seekg(0, ios::beg);
     file2.seekg(0, ios::beg);
@@ -20,17 +20,21 @@ int compare_files(const char *input_file_1, const char *input_file_2)
         char file_1_byte;
         char file_2_byte;
 
-        file1.read(&file_1_byte, 1);
-        file2.read(&file_2_byte, 1);
-
+        file1.get(file_1_byte);
+        file2.get(file_2_byte);
+        
         if (file_1_byte != file_2_byte)
-            return 0;
+        {
+            file1.close();
+            file2.close();
+            return 1;
+        }
     }
 
     file1.close();
     file2.close();
 
-    return 1;
+    return 0;
 }
 
 static bool isVowel(char c)
