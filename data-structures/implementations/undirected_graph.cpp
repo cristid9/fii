@@ -13,6 +13,7 @@ Graph::Graph(int V)
 void Graph::addEdge(int v, int w)
 {
     edges[v].push_back(w);
+    edges[w].push_back(v);
 }
 
 vector<int> Graph::adj(int v)
