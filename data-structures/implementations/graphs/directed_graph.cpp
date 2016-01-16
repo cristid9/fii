@@ -14,10 +14,17 @@ Digraph::Digraph(int v)
 
 void Digraph::insertArc(int v, int w)
 {
-    if (find(edges.begin(), edges.end(), v) != edges.end())
+    if (find(edges[v].begin(), edges[v].end(), w) != edges[v].end())
         return;
 
     edges[v].push_back(w);
 }
 
+void Graph::removeArc(int v, int w)
+{
+    if (find(edges.begin(), edges.end(), w) == edges.end())
+        return;
+
+    edges[v].erase(remove(edges[v].begin(), edges[v].end(), w));
+}
 
