@@ -18,6 +18,8 @@ class Digraph
 //        vector<int> internAdj(int v);
 //        vector<int> externAdj(int v);
 //        vector<int> accessibleFrom(int v);
+        Digraph transpose();
+        vector<int> adj(int v);
 };
 
 #endif // DIRECTED_GRAPH_H__
