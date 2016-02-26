@@ -57,6 +57,6 @@ Snippets
 
 Explicatii
 ==========
-    * Constructorii si destrucorii nu au return type. 
-    * Separarea interfetei de implementare.
+   * Constructorii si destrucorii nu au return type. 
+   * Separarea interfetei de implementare.
 
