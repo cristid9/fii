@@ -1,10 +1,10 @@
 Commands
-========
+
     * find <path> [optiuni]
     * sort
 
 Snippets
-========
+
     * find . -name "a*" -or -name "*a" 
     * find . \( -name "a*" -or -name "*a" \)
     * find . \( -name "a*" -or -name "*a" \) -printf "%f %n %k\n"
@@ -14,7 +14,7 @@ Snippets
     * sort -k3 -t: /etc/passwd
 
 Concepte
-========
+
     * recapitulare drepturi de acces (rwx - owner, rwx - group, rwx - o).
     * cum citim man pages (foloseste /  pentru cautare).
     * diferenta dintre argumentele cu un dash si cele cu 2 dash-uri.
@@ -33,7 +33,7 @@ Concepte
         - >> <file.txt> (face append)
     
 Activitate
-==========
+
     * rezolvarea exercitiilor de laborator
 
 
