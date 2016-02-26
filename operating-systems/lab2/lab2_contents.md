@@ -16,21 +16,21 @@ Snippets
 Concepte
 ========
     * recapitulare drepturi de acces (rwx - owner, rwx - group, rwx - o).
-    * cum citim man pages (foloseste `/`  pentru cautare).
+    * cum citim man pages (foloseste /  pentru cautare).
     * diferenta dintre argumentele cu un dash si cele cu 2 dash-uri.
-    * "escaparea" wildcardurilor in bash. (in cazul de fata `;` si `{` & `}` la find).
-    * wildcarduri in shell (pe exemplul cu `find`).
+    * "escaparea" wildcardurilor in bash. (in cazul de fata ; si { & } la find).
+    * wildcarduri in shell (pe exemplul cu find).
         - *
         - +
-    * expresii in find (`-or`).
+    * expresii in find (-or).
     * important la find:
         - exec
         - printf
         - _combinarea expresiilor_
 
-    * `I/O` redirect:
-        - `> <file.txt>`
-        - `>> <file.txt>` (face append)
+    * I/O redirect:
+        - > <file.txt>
+        - >> <file.txt> (face append)
     
 Activitate
 ==========
