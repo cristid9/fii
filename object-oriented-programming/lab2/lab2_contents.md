@@ -1,14 +1,14 @@
 Concepte
 ========
-    * incapsulare
-    * suprainacarcare 
-    * suprascriere (strans legata de polimorfism)    
-    * abstractizare (!)
-    * modificatori de access:
-        - `private`
-        - `public`
-        - `protected` (vedem mai multe cand ajungem la polimorfism)
-    * `this` - pointer la instanta curenta
+   * incapsulare
+   * suprainacarcare 
+   * suprascriere (strans legata de polimorfism)    
+   * abstractizare (!)
+   * modificatori de access:
+      - `private`
+      - `public`
+      - `protected` (vedem mai multe cand ajungem la polimorfism)
+   * `this` - pointer la instanta curenta
 
 Snippets
 ========
@@ -54,13 +54,9 @@ Snippets
     Nume::Nume(char q) { ... }
     Nume::~Nume() { ... }
 ```
-* 
 
 Explicatii
 ==========
-    * constructorii si destrucorii nu au return type 
-    * separarea interfetei de implementare
-    *
+    * Constructorii si destrucorii nu au return type. 
+    * Separarea interfetei de implementare.
 
-Snippets
-========
