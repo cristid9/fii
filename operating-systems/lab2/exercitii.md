@@ -70,3 +70,9 @@ Exercitii pentru laboratorul 2
 
     Solutie:
        * `find ~ \( -name "*.htm" -or -name "*.html" -or -name "*.php" -or -name "*.css" \) -printf "%p : %k : %t\n"`
+
+11. > Să se scrie comanda care șterge toate fișierele temporare din contul propriu (i.e. din directorul 
+    > home, și inclusiv pe cele din subdirectoarele acestuia).
+
+    Solutie:
+       * `find ~ \( -name "*~" -or -name "*.bak" \) -exec rm \{} \;`
