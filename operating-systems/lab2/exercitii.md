@@ -34,3 +34,10 @@ Exercitii pentru laboratorul 2
 
    Solutie:
       * `find . \( -perm /g+r -and -perm /g+x \) -printf "%p %M \n"`
+
+6. > Să se scrie comanda ce afișează toate fișierele de tip normal (i.e., fișiere obișnuite) 
+   > pe care le dețineți în cont și care au fost modificate în ultima săptămână, împreună 
+   > cu drepturile de acces și data ultimei modificări.
+   
+   Solutie:
+      * `find . -type f -mtime 7 -printf "%p -- %M -- %t\n"`
