@@ -6,7 +6,7 @@ Exercitii pentru laboratorul 2
 
    Solutie: 
       * `find . -exec stat --format="%n --> %a" {} \;`
-      * `find . -printf "%f %M\n"`
+      * `find . -intf "%f %M\n"`
 
 2. > Să se scrie comanda ce afișează pentru toate fișierele găsite în directorul dat 
    > ca argument în linia de comandă, parcurs recursiv, fișiere ale căror nume încep 
@@ -27,3 +27,10 @@ Exercitii pentru laboratorul 2
 
    Solutie:
       * `sort /etc/passwd --numeric-sort --key=3 -t:
+
+5. > Să se scrie comanda ce afișează toate fișierele și directoarele, precum și drepturile 
+   > de acces asociate acestora, aflate în directorul dat ca argument în linia de comandă, 
+   > parcurs recursiv, pentru care grupul proprietarului are drepturi de citire și de execuție.
+
+   Solutie:
+      * `find . \( -perm /g+r -and -perm /g+x \) -printf "%p %M \n"`
