@@ -49,4 +49,24 @@ Exercitii pentru laboratorul 2
    Solutie:
       * `find . -perm /o+x -printf "%p %a %k\n"`
 
+8. > Să se scrie comanda care să afișeze toate programele sursă C/C++ (i.e., fișierele cu 
+   > extensiile .c, .cpp și .h) pe care le dețineți în cont, împreună cu lungimile lor 
+   > (i.e., dimensiunile lor în octeți) și data ultimei modificări.
 
+   Solutie:
+      * `find . \( -name "*.cpp" -or -name "*.c" -or -name "*.h" \) -printf "%p %k\n"`
+
+9. > Să se scrie comanda care identifică toate programele sursă C++ (i.e., fișierele cu extensia 
+   > .cpp) pe care le dețineti (doar) în directorul home și, dacă dimensiunea acestora este mai 
+   > mică de 5 Kbytes, încearcă să le compileze folosind g++. Ieșirea de eroare standard pentru 
+   > comanda de compilare va fi redirectată către un fișier errors.txt. 
+
+   Solutie:
+      * `find ~ -maxdepth 1 -name "*.cpp" -size -5k -exec g++ \{} 2>>errors.txt \;`
+
+10. > Să se scrie comanda ce afișează toate fișierele pagini web (i.e., fișierele cu extensiile .htm, 
+    > .html, .php, .css) pe care le dețineți în cont, împreună cu lungimile lor (i.e., 
+    > dimensiunile lor în Kbytes) și data ultimei modificări.
+
+    Solutie:
+       * `find ~ \( -name "*.htm" -or -name "*.html" -or -name "*.php" -or -name "*.css" \) -printf "%p : %k : %t\n"`
