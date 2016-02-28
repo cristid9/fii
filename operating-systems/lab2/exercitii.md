@@ -21,3 +21,9 @@ Exercitii pentru laboratorul 2
 
    Solutie:
       * `sort -r /etc/passwd > output.txt`
+
+4. > Să se scrie comanda care să sorteze crescător după UID liniile de text din 
+   > fișierul /etc/passwd. 
+
+   Solutie:
+      * `sort /etc/passwd --numeric-sort --key=3 -t:
