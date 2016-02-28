@@ -15,3 +15,9 @@ Exercitii pentru laboratorul 2
 
    Solutie:
       * `find . \( -name "*a" -or -name "a*" \) -printf "% p %a %k"`
+
+3. > Să se scrie comanda care să sorteze descrescător liniile de text din fișierul 
+   > /etc/passwd, iar rezultatul sortării să fie salvat în fișierul output.txt. 
+
+   Solutie:
+      * `sort -r /etc/passwd > output.txt`
