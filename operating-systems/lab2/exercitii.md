@@ -41,3 +41,12 @@ Exercitii pentru laboratorul 2
    
    Solutie:
       * `find . -type f -mtime 7 -printf "%p -- %M -- %t\n"`
+
+7. > Să se scrie comanda ce afișează toate fișierele găsite începând din directorul dat ca argument 
+   > în linia de comandă, parcurs recursiv, pentru care proprietarul fișierului are drept de execuție 
+   > asupra sa, precum și data ultimei accesări a fișierului și dimensiunea sa în Kbytes.
+
+   Solutie:
+      * `find . -perm /o+x -printf "%p %a %k\n"`
+
+
