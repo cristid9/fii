@@ -1,0 +1,85 @@
+/**
+ * @brief We did some more things at this seminar, but I was to lazy to
+ *        implement all of them. So, I've just wrote this dirty version 
+ *        merge sort.
+ */
+merge(part1, part2)
+{
+    container = [];
+    
+    cond = 1;
+    i = 0;
+    j = 0;
+    k = 0;
+
+    /* I've told you that is a dirty implementation! */
+    while (cond == 1)
+    {
+        if (i >= part1.size())
+            cond = 0;
+        else if (j >= part2.size())
+            cond = 0;
+        else
+        {
+            if (part1[i] <= part2[j])
+            {
+                container[k] = part1[i];
+                i = i + 1;
+            }
+            else
+            {
+                container[k] = part2[j];
+                j = j + 1;
+            }
+            k = k + 1;
+        }
+    }
+
+    while (i < part1.size())
+    {
+        container[k] = part1[i];
+        i = i + 1;
+        k = k + 1;
+    }
+
+    while (j < part2.size())
+    {
+        container[k] = part2[j];
+        j = j + 1;
+        k = k + 1;
+    }
+
+    return container;
+}
+
+merge_sort(array, start, stop)
+{
+    if (start == stop)
+    {
+        ret = [];
+        ret[0] = array[start];
+        return ret;
+    }
+    
+    mid   = (start + stop) / 2;
+    left  = merge_sort(array, start, mid);
+    right = merge_sort(array, mid + 1, stop);
+    return merge(left, right);
+}
+
+merge_sort_wrapper(array)
+{
+    return merge_sort(array, 0, array.size() - 1);
+}
+
+a = [4, 3, 2, 1]; 
+
+a = merge_sort_wrapper(a); 
+
+/*
+    p1 = [1, 2];
+    p2 = [3, 4];
+*/
+/* b = merge(p1, p2); */
+
+
