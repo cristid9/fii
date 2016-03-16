@@ -1,0 +1,27 @@
+/*
+ * @brief This is the first homework.
+ */
+
+bubbleSort(a)
+{
+    if (a.size() == 1)
+    {
+        return a;
+    }
+
+    for (i = 0; i < a.size(); i = i + 1)
+    {
+        for (j = 0; j < a.size() - 1; j = j + 1)
+        {
+            if (a[j] > a[j + 1])
+            {
+                tmp = a[j];
+                a[j] = a[j + 1];
+                a[j + 1] = tmp;
+            }
+        }
+    }
+    return a;
+}
+
+a = bubbleSort(a);
