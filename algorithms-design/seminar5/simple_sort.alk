@@ -1,0 +1,36 @@
+/*
+ * @brief This is the second homework.
+ * 
+ * @note_to_me The code is still dirty.
+ *
+ */
+
+simple_sort(cont) {
+    pos0 = 0;
+    pos2 = cont.size() - 1;
+
+    for (i = 0; i <= pos2; i = i + 1) {
+
+        if (cont[i] == 0) {
+            tmp = cont[i];
+            cont[i] = cont[pos0];
+            cont[pos0] = tmp;
+            
+            pos0 = pos0 + 1; 
+        }
+        
+        if (cont[i] == 2) {
+            tmp = cont[i];
+            cont[i] = cont[pos2];
+            cont[pos2] = tmp;
+            
+            i = i - 1;
+            pos2 = pos2 - 1;
+        }
+    
+    }
+
+    return cont;
+}
+
+a = simple_sort(a);
