@@ -1,3 +1,8 @@
+/**
+ * @brief You may wonder why the hell am I mixing c functions with c++, well
+ *        it is not my fault. I had to. It was in the requirement of the lab.
+ *        Bad luck...
+ */
 #include <stack>
 #include <queue>
 #include <cstdlib>
