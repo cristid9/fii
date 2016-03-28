@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
     int occurences[OCC_SIZE];
     memset(occurences, 0, sizeof(int) * OCC_SIZE);
 
-    int buffer[2];
+    int buffer[SECTOR];
 
     int c;
     while (0 != (c = read(fd, buffer, 512)))
