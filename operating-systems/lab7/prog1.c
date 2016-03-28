@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
     int fd = open(argv[1], O_RDONLY);
     if (fd == -1)
     {
-        perror("Oh snap, something wen wrong");
+        perror("error opening the file");
         exit(2);
     }
     
@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
     {
         if (c == -1)
         {
-            perror("Double snap, errors all over the place!");
+            perror("can't read");
             exit(3);
         }
 
