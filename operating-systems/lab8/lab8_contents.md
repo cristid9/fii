@@ -5,6 +5,7 @@ Concepte
   * o descriere scurta a structurii `flock`
   * in mod normal trebuie eliminat lacatul
   * reprezentarea binara
+C
 ```
 float x;
 write(fd, &x, sizeof(float));
