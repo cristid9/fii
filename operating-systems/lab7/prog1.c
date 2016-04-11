@@ -4,7 +4,7 @@
 #include <fcntl.h>
 #include <string.h>
 
-#define OCC_SIZE 255
+#define OCC_SIZE 256
 #define SECTOR 512
 
 int main(int argc, char *argv[])
@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
     int occurences[OCC_SIZE];
     memset(occurences, 0, sizeof(int) * OCC_SIZE);
 
-    int buffer[SECTOR];
+    char buffer[SECTOR];
 
     int c;
     while (0 != (c = read(fd, buffer, 512)))
@@ -38,16 +38,9 @@ int main(int argc, char *argv[])
             exit(3);
         }
 
-        for (int i = 0; i < c; i++) {
-            for (int match = 0; match < 255; match++)
-            {
-                /* This ma be redudant */
-                if ((char)buffer[i] == (char)match)
-                {
-                    occurences[match]++;
-                    break;
-                }
-            }
+        for (int i = 0; i < c; i++) 
+        {
+            occurences[buffer[i]]++;
         }
     }
 

@@ -27,7 +27,7 @@ int main(int argc, char* argv[])
     }
 
     int argIdx;
-    for (argIdx = 0; argIdx < argc; argIdx++)
+    for (argIdx = 1; argIdx < argc; argIdx++)
     {
         /* pregatirea lacatului pentru fisier */
         lacat.l_type   = F_WRLCK;

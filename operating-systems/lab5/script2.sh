@@ -1,5 +1,7 @@
 #/bin/bash
 
+# hdjfhsdfjksdf dsfjsdjfhj
+
 max_line_length=0
 
 function rec_line_counter ()
