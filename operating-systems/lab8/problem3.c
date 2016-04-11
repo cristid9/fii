@@ -48,25 +48,23 @@ int main(int argc, char* argv[])
             perror("\tMotivul");
             exit(3);
         }
-        else
-        {
-            lseek(fd, 0, SEEK_SET);
-            float tmp = atof(argv[argIdx]);
-            float storage;
-            read(fd, &storage, sizeof(float));
-            tmp += storage;
-            lseek(fd, 0, SEEK_SET);
-            write(fd, &tmp, sizeof(float));
-            printf("Am scris %f\n", tmp);
-    
-            lacat.l_type   = F_UNLCK;
-            lacat.l_whence = SEEK_SET;
-            lacat.l_start  = 0;
-            lacat.l_len    = sizeof(float); 
-            if (-1 == fcntl(fd, F_SETLKW, &lacat))
-                perror("Error at second fcntl");
         
-        }
+        lseek(fd, 0, SEEK_SET);
+        float tmp = atof(argv[argIdx]);
+        float storage;
+        read(fd, &storage, sizeof(float));
+        tmp += storage;
+        lseek(fd, 0, SEEK_SET);
+        write(fd, &tmp, sizeof(float));
+        printf("Am scris %f\n", tmp);
+
+        lacat.l_type   = F_UNLCK;
+        lacat.l_whence = SEEK_SET;
+        lacat.l_start  = 0;
+        lacat.l_len    = sizeof(float); 
+        if (-1 == fcntl(fd, F_SETLKW, &lacat))
+            perror("Error at second fcntl");
+    
     }
 
     close(fd);
