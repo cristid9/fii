@@ -13,7 +13,7 @@ int main(int argc, char* argv[])
     struct flock lacat;
 
     /* verificarea existentei argumentului in linia de comanda */
-    if(argv[1] < 2)
+    if(argc < 2)
     {
         fprintf(stderr,"Programul trebuie apelat cu cel putin un parametru.\n");
         exit(1);
@@ -36,7 +36,7 @@ int main(int argc, char* argv[])
         lacat.l_len    = sizeof(float); /* aici se poate pune orice valoare, inclusiv 0,
                                deoarece pentru problema noastra nu conteaza lungimea zonei blocate.*/
 
-        if (-1 == (codBlocaj = fcntl(fd,F_SETLKW,&lacat)) ) 
+        while( (-1 == (codBlocaj = fcntl(fd,F_SETLK,&lacat)) ) && ((errno == EACCES)||(errno == EAGAIN)) )
         { 
             fprintf(stderr, "Blocaj imposibil [ProcesID:%d].\n", getpid());
             perror("\tMotivul");
@@ -48,13 +48,11 @@ int main(int argc, char* argv[])
             perror("\tMotivul");
             exit(3);
         }
-        
-        lseek(fd, 0, SEEK_SET);
         float tmp = atof(argv[argIdx]);
         float storage;
         read(fd, &storage, sizeof(float));
-        tmp += storage;
         lseek(fd, 0, SEEK_SET);
+        tmp += storage;
         write(fd, &tmp, sizeof(float));
         printf("Am scris %f\n", tmp);
 
@@ -62,9 +60,6 @@ int main(int argc, char* argv[])
         lacat.l_whence = SEEK_SET;
         lacat.l_start  = 0;
         lacat.l_len    = sizeof(float); 
-        if (-1 == fcntl(fd, F_SETLKW, &lacat))
-            perror("Error at second fcntl");
-    
     }
 
     close(fd);

@@ -1,0 +1,56 @@
+merge(out a, start, stop) {
+    mid = (start + stop) / 2;
+        
+    tmp = [];
+
+    i = start;
+    j = mid + 1;
+    invs = 0;
+
+    while (i <= mid && j <= stop) {
+        if (a[i] <= a[j]) {
+            tmp.pushBack(a[i]);
+            i = i + 1;
+        } else {
+            tmp.pushBack(a[j]);
+            j = j + 1;
+            invs = invs + (mid + 1 - i);
+        }
+    }
+
+    while (i <= mid) {
+        tmp.pushBack(a[i]);
+        i = i + 1;
+    }
+
+    while (j <= stop) {
+        tmp.pushBack(a[j]);
+        j = j + 1;
+    }
+    
+    for (k = 0; k < tmp.size(); k = k + 1) {
+        a[start + k] = tmp[k];
+    }
+
+    return invs;
+}
+
+__merge_sort(out a, start, stop) {
+    if (start < stop) {
+
+        mid = (start + stop) / 2;
+        invs1 = __merge_sort(a, start, mid);
+        invs2 = __merge_sort(a, mid + 1, stop);
+
+        invs = merge(a, start, stop);
+
+        return invs1 + invs2 + invs;
+    }
+    return 0;
+}
+
+merge_sort(out a) {
+    return __merge_sort(a, 0, a.size() - 1);
+}
+
+invs = merge_sort(a);
