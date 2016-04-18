@@ -109,6 +109,7 @@ int main()
             break;
         }
 
+        // Cu dedicatie pentru Marius Olaru
         printf("%d %c %d = %d\n", operand1, operator, operand2, result);
     }
 
