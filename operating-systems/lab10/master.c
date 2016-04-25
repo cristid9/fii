@@ -28,8 +28,6 @@ int main(int argc, char* argv[])
 
         if (child_pid == 0)
         {
-            
-            printf("in proesul copil");
             char storage_operand1[OP_SIZE];
 
             char storage_operand2[OP_SIZE];
