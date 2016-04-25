@@ -21,7 +21,6 @@ int main(int argc, char* argv[])
         int status;
         pid_t child_pid = fork();
         
-        printf("iiiResult :%d\n",child_pid);
         if (child_pid == -1)
         {
             perror("N-am putut crea procesul");
