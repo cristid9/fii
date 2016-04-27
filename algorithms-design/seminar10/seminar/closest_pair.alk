@@ -1,0 +1,180 @@
+
+mergeY(out a, start, stop) {
+    mid = (start + stop) / 2;
+        
+    tmp = [];
+
+    i = start;
+    j = mid + 1;
+    invs = 0;
+
+    while (i <= mid && j <= stop) {
+        if (a[i].y <= a[j].y) {
+            tmp.pushBack(a[i]);
+            i = i + 1;
+        } else {
+            tmp.pushBack(a[j]);
+            j = j + 1;
+            invs = invs + (mid + 1 - i);
+        }
+    }
+
+    while (i <= mid) {
+        tmp.pushBack(a[i]);
+        i = i + 1;
+    }
+
+    while (j <= stop) {
+        tmp.pushBack(a[j]);
+        j = j + 1;
+    }
+    
+    for (k = 0; k < tmp.size(); k = k + 1) {
+        a[start + k] = tmp[k];
+    }
+
+    return invs;
+}
+
+__merge_sortY(out a, start, stop) {
+    if (start < stop) {
+
+        mid = (start + stop) / 2;
+        invs1 = __merge_sortY(a, start, mid);
+        invs2 = __merge_sortY(a, mid + 1, stop);
+
+        invs = mergeY(a, start, stop);
+
+        return invs1 + invs2 + invs;
+    }
+    return 0;
+}
+
+mergeX(out a, start, stop) {
+    mid = (start + stop) / 2;
+        
+    tmp = [];
+
+    i = start;
+    j = mid + 1;
+    invs = 0;
+
+    while (i <= mid && j <= stop) {
+        if (a[i].x <= a[j].x) {
+            tmp.pushBack(a[i]);
+            i = i + 1;
+        } else {
+            tmp.pushBack(a[j]);
+            j = j + 1;
+            invs = invs + (mid + 1 - i);
+        }
+    }
+
+    while (i <= mid) {
+        tmp.pushBack(a[i]);
+        i = i + 1;
+    }
+
+    while (j <= stop) {
+        tmp.pushBack(a[j]);
+        j = j + 1;
+    }
+    
+    for (k = 0; k < tmp.size(); k = k + 1) {
+        a[start + k] = tmp[k];
+    }
+
+    return invs;
+}
+
+__merge_sortX(out a, start, stop) {
+    if (start < stop) {
+
+        mid = (start + stop) / 2;
+        invs1 = __merge_sortX(a, start, mid);
+        invs2 = __merge_sortX(a, mid + 1, stop);
+
+        invs = mergeX(a, start, stop);
+
+        return invs1 + invs2 + invs;
+    }
+    return 0;
+}
+
+dist(a, b) {
+    part1 = (b.x - a.x) * (b.x - a.x);
+    part2 = (b.y - a.y) * (b.y - a.y);
+    result = sqrt(part1 + part2);
+
+    return result;
+}
+
+min(a, b) {
+    if (a < b)
+        return a;
+    return b;
+}
+
+abs(a) {
+    if (a < 0) {
+        return -1 * a;
+    }
+
+    return a;
+}
+
+__stripClosest(stripped, delta) {
+    __merge_sortY(sripped, 0, stripped.size() - 1);
+
+    minDist = delta;
+
+    for (i = 0; i < stripped.size(); i = i + 1) {
+        for (j = i + 1; j < stripped.size() 
+            && (stripped[j].y - stripped[i].y) < delta; j = j + 1) 
+        {
+            if (dist(stripped[i], stripped[j]) < delta) {
+                minDist = dist(stripped[i], stripped[j]);
+            }
+        }
+    }
+
+    return minDist;
+}
+
+__closestPair(points, start, stop) {
+
+    if (stop - start <= 2) {
+
+        d1 = dist(points[start], points[start + 1]);
+        if (start - stop == 1) {
+            return d1;
+        }
+        
+        d2 = dist(points[start + 1], points[start + 2]);
+        return min(d1, d2);
+    }
+
+    mid = (start + stop) / 2;
+
+    midPoint = points[mid];
+    dist1    = __closestPair(points, start, mid);
+    dist2    = __closestPair(points, mid + 1, stop);
+    delta    = min(dist1, dist2);
+
+    strip = [];
+    for (i = start; i < stop; i = i + 1) {
+        if (abs(points[i].x - midPoint.x) < delta) {
+            strip.pushBack(points[i]);
+        }
+    }
+    dist3 = __stripClosest(strip, delta);
+
+    return min(dist3, delta);
+}
+
+closestPair(points, sz) {
+    __merge_sortX(points, 0, sz - 1);
+    return __closestPair(points, 0, sz - 1);
+}
+
+d = closestPair(a, n);
