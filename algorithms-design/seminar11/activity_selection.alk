@@ -1,0 +1,65 @@
+merge(out a, out b, start, stop) {
+    mid = (start + stop) / 2;
+
+    tmp  = [];
+    tmp2 = [];
+
+    i = start;
+    j = mid + 1;
+
+    while (i <= mid && j <= stop) {
+        if (a[i] <= a[j]) {
+            tmp.pushBack(a[i]);
+            tmp2.pushBack(b[i]);
+            i = i + 1;
+        } else {
+            tmp.pushBack(a[j]);
+            tmp2.pushBack(b[j]);
+            j = j + 1;
+        }
+    }
+
+    while (i <= mid) {
+        tmp.pushBack(a[i]);
+        tmp2.pushBack(b[i]);
+        i = i + 1;
+    }
+
+    while (j <= stop) {
+        tmp.pushBack(a[j]);
+        tmp2.pushBack(b[j]);
+        j = j + 1;
+    }
+
+    for (k = 0; k < tmp.size(); k = k + 1) {
+        a[start + k] = tmp[k];
+        b[start + k] = tmp2[k];
+    }
+}
+
+__merge_sort(out a, out b, start, stop) {
+    if (start < stop) {
+
+        mid = (start + stop) / 2;
+        __merge_sort(a, b, start, mid);
+        __merge_sort(a, b, mid + 1, stop);
+
+        merge(a, b, start, stop);
+    }
+}
+
+selection(out start, out en, n) {
+    __merge_sort(start, en, 0, 3);
+    activities = [];
+    time       = 0;
+
+    for (i = 0; i < n; i = i + 1) {
+        if (start[i] >= time) {
+            activities.pushBack(i);
+            time = en[i];
+        }
+    }
+    return activities;
+}
+
+act = selection(s, f, n);
