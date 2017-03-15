@@ -13,9 +13,9 @@ Functii de ordin superior
 -------------------------
 
 * functii cu ordin superion din biblioteca standard (pus accept pe tipul returnat)
- - `filter`
- - `map`
- - `foldl`
+    - `filter`
+    - `map`
+    - `foldl`
 * functii anonime
 * **toate functiile iau doar un parametru defapt**, currying
 
