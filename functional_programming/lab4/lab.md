@@ -20,5 +20,5 @@ Functii de ordin superior
 
 Tema
 ----
-* implementat `filter, map, fold` pe tipul de lista definit in
+* implementat `filter, map, foldl` pe tipul de lista definit in
   laboratorul anterior
