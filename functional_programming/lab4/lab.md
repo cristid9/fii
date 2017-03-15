@@ -12,9 +12,10 @@ Misc
 Functii de ordin superior
 -------------------------
 
-* `filter`
-* `map`
-* `foldl`
+* functii cu ordin superion din biblioteca standard (pus accept pe tipul returnat)
+ - `filter`
+ - `map`
+ - `foldl`
 * functii anonime
 * **toate functiile iau doar un parametru defapt**, currying
 
