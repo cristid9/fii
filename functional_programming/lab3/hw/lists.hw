@@ -1,0 +1,21 @@
+data CustomList = EmptyList | Cons Int CustomList deriving Show
+
+addToEnd::CustomList -> Int -> CustomList
+addToEnd EmptyList el = (Cons el EmptyList)
+addToEnd (Cons i l) el = (Cons i (addToEnd l el))
+
+base2::Int -> CustomList
+base2 0 = (Cons 0 EmptyList)
+base2 1 = (Cons 1 EmptyList)
+base2 num = addToEnd (base2 (num `div` 2)) (num `mod` 2)
+
+-- helper
+customCount::CustomList -> Int
+customCount EmptyList = 0
+customCount (Cons el l) = 1 + (customCount l)
+
+inverse2::CustomList -> Int
+inverse2 EmptyList = 0 
+inverse2 (Cons el l) = (2 ^ (customCount l)) * el + (inverse2 l)
+
+
