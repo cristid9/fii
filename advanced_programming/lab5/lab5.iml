@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" exported="" name="java-decompiler" level="project" />
+    <orderEntry type="library" exported="" name="velocity-1.7" level="project" />
+    <orderEntry type="library" exported="" name="poi-3.9" level="project" />
+    <orderEntry type="library" exported="" name="jasperreports-3.7.0" level="project" />
+    <orderEntry type="library" name="itext-2.1.7" level="project" />
+    <orderEntry type="library" name="dynamicreports-1.3.0" level="project" />
+    <orderEntry type="library" name="commons-logging-1.2" level="project" />
+    <orderEntry type="library" name="commons-lang-2.6" level="project" />
+    <orderEntry type="library" name="commons-digester-2.1" level="project" />
+    <orderEntry type="library" name="commons-collections-3.2.1" level="project" />
+    <orderEntry type="library" name="commons-beanutils-1.9.3" level="project" />
+    <orderEntry type="library" name="jasper-6.0.32" level="project" />
+    <orderEntry type="library" name="gson-2.3.1" level="project" />
+  </component>
+</module>

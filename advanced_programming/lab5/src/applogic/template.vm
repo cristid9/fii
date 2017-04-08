@@ -1,0 +1,13 @@
+<html>
+    <head>
+        template
+    </head>
+
+    <body>
+        <ul>
+            #foreach($item in $items)
+                <li> $item.toString()</li>
+            #end
+        </ul>
+    </body>
+</html>
