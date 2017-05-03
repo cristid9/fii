@@ -4,8 +4,8 @@ Tipul unit
 * `()` - asta se numeste unit
 * un tip de date cu o singura valoare
 
- hs
- ```
+
+ ```haskell
  -- creaza
  f::Int -> ()
  f x = ()
@@ -47,24 +47,23 @@ Tema
 
 Cod discutat la laborator
 =========================
-hs
-```
+
+```haskell
 main :: IO ()
 main = (putStrLn "ana") >> (putStrLn "maria")
 ```
-hs
-```
+
+```haskell
 main :: IO ()
 main = getLine >> putStrLn "ana"
 ```
 
-hs
-```
+```haskell
 main :: IO ()
 main = getLine >>= (\s -> (putStrLn ("Hello, " ++ s)))
 ```
-hs
-```
+
+```haskell
 -- gen pt secventializare
 main :: IO ()
 main = (putStrLn "Name") >>= 
@@ -81,8 +80,8 @@ main = (putStrLn "Name") >>=
     )
 ```
 
-hs
-```
+
+```haskell
 main :: IO ()
 main = do
     x <- putStrLn "Nume"
@@ -92,8 +91,8 @@ main = do
     z <- putStrLn ("H " ++ nume ++ " " ++ pren)
     return z
 ```
-hs
-```
+
+```haskell
 main :: IO ()
 main = (readFile "input.txt") >>= print
 
