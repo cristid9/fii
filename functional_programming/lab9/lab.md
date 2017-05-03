@@ -38,7 +38,7 @@ Compilare
 `do` notation
 =============
 
-* Syntactic sugar pentru versiunea 3 de `main`
+* Syntactic sugar pentru versiunea 4 de `main`
 
 Tema
 ====
