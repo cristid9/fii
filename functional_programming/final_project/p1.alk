@@ -1,0 +1,15 @@
+n = 7;
+a = 1;
+b = 2;
+s = 0;
+
+while (n) {
+    s = a + b;
+    a = b;
+    b = s;
+    n = n - 1;
+}
+
+result = a;
+
+

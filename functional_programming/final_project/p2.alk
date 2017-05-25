@@ -1,0 +1,9 @@
+a = 0;
+n = 10;
+
+while (n) {
+    a = a + n;
+    n = n - 1;
+}
+
+result = a;
