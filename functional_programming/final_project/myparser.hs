@@ -72,11 +72,13 @@ auxExpParser :: Exp -> Parser Exp
 auxExpParser t = (do
    sign <- char '+'
    _ <- space
+   termen <- termParser 
+   o <- auxExpParser (Suma t termen)
    return o) <|>  (do
        sign <- char '-'
        _ <- space
        termen <- termParser 
-       o <-auxExpParser  (Diferenta t termen)
+       o <- auxExpParser  (Diferenta t termen)
        return o) <|> (do 
            _ <- space
            return t)
@@ -116,14 +118,14 @@ evalp (Suma e1 e2) valp = sumaMaybe (evalp e1 valp) (evalp e2 valp)
 evalp (Diferenta e1 e2) valp = diferentaMaybe (evalp e1 valp) (evalp e2 valp)
 evalp (Produs e1 e2) valp = produsMaybe (evalp e1 valp) (evalp e2 valp)
 
-executaInstr :: ValuationPar -> Instr -> ValuationPar
-executaInstr valuatie (Atrib v e) = (update valuatie v (evalp e valuatie))
+executaInstr :: ValuationPar -> Instr -> Maybe ValuationPar
+executaInstr valuatie (Atrib v e) = (Just (update valuatie v (evalp e valuatie)))
 executaInstr valuatie (Cond e p1 p2) = case  (evalp e valuatie) of
-    (Just 0) -> fromMaybe (executaProgram valuatie p2)
-    _ -> fromMaybe(executaProgram valuatie p1)
+    (Just 0) -> executaProgram valuatie p2
+    _ -> executaProgram valuatie p1
 executaInstr valuatie (Loop e p1) = case (evalp e valuatie) of
-    (Just 0) -> valuatie 
-    _ -> fromMaybe(executaProgram valuatie p1)
+    (Just 0) -> Just valuatie 
+    _ -> executaProgram valuatie p1
 
 type Program = [Instr]
 
