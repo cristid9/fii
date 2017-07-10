@@ -6,4 +6,4 @@ while (n) {
     n = n - 1;
 }
 
-result = a;
+result = c;

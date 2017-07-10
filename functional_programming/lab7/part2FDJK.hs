@@ -217,4 +217,4 @@ Exemple:
 evalProgram :: Program -> Maybe Int
 evalProgram prog = (executaProgram empty prog) "result"
 
--- plm, mai uita-te pe ele acasa
+-- mai uita-te pe ele acasa
