@@ -11,7 +11,7 @@ Setup
 
 Probleme
 =========
-* Vazut daca nu au `SUID`-ul setat si de rulat.
+* Vazut daca nu au `SUID`-ul setat ce se intampla si de rulat.
     - `passwd` (__token manipulation error__)
     - `chmod` (__merge normal__)
     - `su` (__merge normal__)
@@ -25,5 +25,5 @@ Probleme
     - `sudo` (`-rwxr-xr-x` vs `-rwsr-xr-x`)
 
 Dive deep
-=========
+==========
     - `/etc/shadow`
