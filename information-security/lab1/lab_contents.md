@@ -23,6 +23,8 @@ Probleme
     - `chmod` (`-rwxr-xr-x` vs `rwxr-xr-x`)
     - `su` (`-rwxr-xr-x` vs `-rwsr-xr-x`)
     - `sudo` (`-rwxr-xr-x` vs `-rwsr-xr-x`)
+* Copiezi `/bin/zsh` in `/tmp`, il faci `SETUID` si ii dai `4755`. Si vezi daca ai privilegii de root din `zsh`-ul din `/tmp`
+    - Da, da merge.
 
 Dive deep
 ==========
