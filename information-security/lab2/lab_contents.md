@@ -20,10 +20,11 @@ x        {r, t}              z      {a, w}    |
                                               \/
                                               () u
 ```
-Answer:
-    * `can_share(r, x, w, G)`
-    * `can_share(g, x, y, G)`
-    * `can_share(d, z, u, G)`
+Answer the following:
+---------------------
+  * `can_share(r, x, w, G)`
+  * `can_share(g, x, y, G)`
+  * `can_share(d, z, u, G)`
 
 
 Problema 2
@@ -35,6 +36,8 @@ posses certain rights and verify the safety of the system.
 
 Having as input: n - number of vertices, e - number of edges
 
+```
 n e
 a b {r, t}
 C D {r, g}
+```
