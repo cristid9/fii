@@ -1,7 +1,7 @@
 Lab2
 ====
 
-Problema 1
+Problem 1
 ----------
 
 Given the diagram
@@ -27,8 +27,8 @@ Answer the following:
   * `can_share(d, z, u, G)`
 
 
-Problema 2
-----------
+Problem 2
+---------
 
 Homework (week 2-5) Implement a `can_share` predicate. Simulate it 
 on a model with initial state, established subject which shouldn't 
