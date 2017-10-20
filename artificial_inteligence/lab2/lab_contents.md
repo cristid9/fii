@@ -71,9 +71,9 @@ st_finala(SC)
    ```
    * random optimizat
        - eliminare bucla
-       - stari intern
+       - stari interne
 
 Indicatie
 =========
 * gandit la o functie de scor pentru hill climbing
-* Cica sa implementam 3/4 startegii: backtracking, hill climbing, A* 
+* Sa implementam 3/4 startegii: backtracking, hill climbing, A*, random 
