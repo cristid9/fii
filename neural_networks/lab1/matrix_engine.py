@@ -1,68 +1,61 @@
-import re
+from matrices_provider import get_matrices
 
-INPUT_FILE = "system.txt"
-VARIABLES = ["x", "y", "z", "x", "y", "z"]
+def compute_determinant(m):
+    return (m[0][0] * m[1][1] * m[2][2] +\
+            m[0][2] * m[1][0] * m[2][1] +\
+            m[0][1] * m[1][2] * m[2][0]) -\
+           (m[0][2] * m[1][1] * m[2][0] +\
+            m[0][1] * m[1][0] * m[2][2] +\
+            m[0][0] * m[1][2] * m[2][1])
 
-def get_matrices():
-    matrix_1 = [
-        [0, 0, 0],
-        [0, 0, 0],
-        [0, 0, 0]
+def get_transpose(m):
+    return [
+        [m[0][0], m[1][0], m[2][0]],
+        [m[0][1], m[1][1], m[2][1]],
+        [m[0][2], m[1][2], m[2][2]]
     ]
 
-    matrix_result = [0, 0, 0]
+def get_adjugate(t):
+    mi_1 = t[1][1] * t[2][2] - t[2][1] * t[1][2]
+    mi_2 = -(t[1][0] * t[2][2] - t[2][0] * t[1][2])
+    mi_3 = t[1][0] * t[2][1] - t[2][0] * t[1][1]
+    mi_4 = -(t[0][1] * t[2][2] - t[2][1] * t[0][2])
+    mi_5 = t[0][0] * t[2][2] - t[2][0] * t[0][2]
+    mi_6 = -(t[0][0] * t[2][1] - t[2][0] * t[0][1])
+    mi_7 = t[0][1] * t[1][2] - t[1][1] * t[0][2]
+    mi_8 = -(t[0][0] * t[1][2] - t[1][0] * t[0][2])
+    mi_9 = t[0][0] * t[1][1] - t[1][0] * t[0][1]
 
-    with open(INPUT_FILE) as f:
-        content = f.readlines()
-        i, k = 0, 0
-        for line in content:
-            line = line.replace(' ', '')
-            x = re.findall(r'[-+]*[0-9]*x', line)
-            y = re.findall(r'[-+]*[0-9]*y', line)
-            z = re.findall(r'[-+]*[0-9]*z', line)
-            r = re.findall(r'=[ ]*[-+]*[0-9]+', line)
+    return [
+        [mi_1, mi_2, mi_3],
+        [mi_4, mi_5, mi_6],
+        [mi_7, mi_8, mi_9]
+    ]
 
-            if len(x) == 0:
-                x = 0
-            elif x[0].strip() == 'x' or x[0].strip() == '+x':
-                x = 1
-            elif x[0].strip() == '-x':
-                x = -1
-            else:
-                x = float(x[0][0:-1])
+def get_inverse(m_star, det):
+    return [
+        [m_star[0][0] * (1.0 / det), m_star[0][1] * (1.0 / det), m_star[0][2] * (1.0 / det)],
+        [m_star[1][0] * (1.0 / det), m_star[1][1] * (1.0 / det), m_star[1][2] * (1.0 / det)],
+        [m_star[2][0] * (1.0 / det), m_star[2][1] * (1.0 / det), m_star[2][2] * (1.0 / det)]
+    ]
 
-            if len(y) == 0:
-                y = 0
-            elif y[0] == 'y' or y[0] == '+y':
-                y = 1
-            elif y[0] == '-y':
-                y = -1
-            else:
-                y = float(y[0][0:-1])
+def get_answer(iv, r):
+    return [
+        iv[0][0] * r[0] + iv[0][1] * r[1] + iv[0][2] * r[2],
+        iv[1][0] * r[0] + iv[1][1] * r[1] + iv[1][2] * r[2],
+        iv[2][0] * r[0] + iv[2][1] * r[1] + iv[2][2] * r[2]
+    ]
 
-            if len(z) == 0:
-                z = 0
-            elif z[0].strip() == 'z' or z[0].strip() == '+z':
-                z = 1
-            elif z[0].strip() == '-z':
-                z = -1
-            else:
-                z = float(z[0][0:-1])
+if __name__ == "__main__":
+    m, r = get_matrices()
+    det = compute_determinant(m)
+    if det == 0:
+        print 'Determinant 0'
+        exit(1)
+    t = get_transpose(m)
+    a_s = get_adjugate(t)
+    iv = get_inverse(a_s, det)
+    result = get_answer(iv, r)
 
-
-            r = float(r[0][1:])
-
-            matrix_1[i][0] = x
-            matrix_1[i][1] = y
-            matrix_1[i][2] = z
-
-            matrix_result[k] = r
-
-            i += 1
-            k += 1
-
-    return matrix_1, matrix_result
-
-def main():
-    print get_matrices()
+    print result
 
