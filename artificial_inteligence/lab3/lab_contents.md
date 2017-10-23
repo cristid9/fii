@@ -44,12 +44,9 @@ strategie_HC() {
 
 |           |  Gas. sol    |    toate   | Optim
 |----------:|-------------:|-----------:|--------
-|    R      |   DA         |  NU        | NU
-|           |              |            |
-|	HC      |  NU`*`       |   NU       | NU
-|           |              |            |
-|   BKT     |  DA          |   DA       | NU`*`
-|           |              |            |
+|    R      |   DA         |   NU       | NU
+|	 HC     |   NU`*`      |   NU       | NU
+|    BKT    |   DA         |   DA       | NU`*`
 |   `A*`    |   DA         |   DA`*`    | DA 
 
 
