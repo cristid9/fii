@@ -1,0 +1,758 @@
+<aiml version="2.0" encoding="UTF-8">
+
+    <category>
+        <pattern> INTREBARI </pattern>
+        <template>
+
+            <condition name="job">
+                <li value="programator">
+                    <condition name="age_label">
+                        <li value="tanar"> N-am mai vazut programator asa tanar. </li>
+                        <li value="normal">
+                            <random>
+                                <li>
+                                    <condition name="prog_normal_1-a">
+                                        <li value="false">
+                                            Faci si o facultate in paralel cu job-ul?
+                                            <think>
+                                                <set name="current-question">prog_normal_1</set>
+                                            </think>
+                                            <think>
+                                                <set name="prog_normal_1-a">true</set>
+                                            </think>
+                                        </li>
+                                    </condition>
+                                </li>
+                                <li>
+                                    <condition name="prog_normal_2-a">
+                                        <li value="false">
+                                            Care este tehnologia preferata?
+                                            <think>
+                                                <set name="current-question">prog_normal_2</set>
+                                            </think>
+                                            <think>
+                                                <set name="prog_normal_2-a">true</set>
+                                            </think>
+                                        </li>
+                                    </condition>
+                                </li>
+                                <li>
+                                    <condition name="prog_normal_3">
+                                        <li value="false">
+                                            Vrei sa iti deschizi propria afacere?
+                                            <think>
+                                                <set name="current-question">prog_normal_3</set>
+                                            </think>
+                                            <think>
+                                                <set name="prog_normal_3-a">true</set>
+                                            </think>
+                                        </li>
+                                    </condition>
+                                </li>
+                                <li>
+                                    <condition name="prog_normal_4-a">
+                                        <li value="false">
+                                            La ce mare companie iti doresti sa lucrezi?
+                                            <think>
+                                                <set name="current-question">prog_normal_4</set>
+                                            </think>
+                                            <think>
+                                                <set name="prog_normal_4-a">true</set>
+                                            </think>
+                                        </li>
+                                    </condition>
+                                </li>
+                                <li>
+                                    <condition name="prog_normal_5-a">
+                                        <li value="false">
+                                            Vrei sa pleci in strainatate?
+                                            <think>
+                                                <set name="current-question">prog_normal_5</set>
+                                            </think>
+                                            <think>
+                                                <set name="prog_normal_5-a">true</set>
+                                            </think>
+                                        </li>
+                                    </condition>
+                                </li>
+                            </random>
+                        </li>
+                    </condition>
+
+                    <condition name="age_label">
+                        <li value="batran">
+                            <random>
+                                <li>
+                                    <condition name="prog_bat_1-a">
+                                        <li value="false">
+                                            Ai propria afacere?
+                                            <think>
+                                                <set name="current-question">prog_bat_1</set>
+                                            </think>
+                                            <think>
+                                                <set name="prog_bat_1-a">true</set>
+                                            </think>
+                                        </li>
+                                    </condition>
+                                </li>
+                                <li>
+                                    <condition name="prog_bat_2-a">
+                                        <li value="false">
+                                            De cati ani lucrezi in acest domeniu?
+                                            <think>
+                                                <set name="current-question">prog_bat_2</set>
+                                            </think>
+                                            <think>
+                                                <set name="prog_bat_2-a">true</set>
+                                            </think>
+                                        </li>
+                                    </condition>
+                                </li>
+                                <li>
+                                    <condition name="prog_bat_3-a">
+                                        <li value="false">
+                                            Ce tehnologie iti place cel mai mult?
+                                            <think>
+                                                <set name="current-question">prog_bat_3</set>
+                                            </think>
+                                            <think>
+                                                <set name="prog_bat_3-a">true</set>
+                                            </think>
+                                        </li>
+                                    </condition>
+                                </li>
+                                <li>
+                                    <condition name="prog_bat_4-a">
+                                        <li value="false">
+                                            Pentru ce companie iti doresti sa lucrezi in viitor?
+                                            <think>
+                                                <set name="current-question">prog_bat_4</set>
+                                            </think>
+                                            <think>
+                                                <set name="prog_bat_4-a">true</set>
+                                            </think>
+                                        </li>
+                                    </condition>
+                                </li>
+                                <li>
+                                    <condition name="prog_bat_5-a">
+                                        <li value="false">
+                                            Crezi ca in viitor totul va fi automatizat?
+                                            <think>
+                                                <set name="current-question">prog_bat_5</set>
+                                            </think>
+                                            <think>
+                                                <set name="prog_bat_5-a">true</set>
+                                            </think>
+                                        </li>
+                                    </condition>
+                                </li>
+                            </random>
+                        </li>
+                    </condition>
+                </li>
+
+                <li value="profesor">
+                    <condition name="age_label">
+                        <li value="tanar"> N-am mai vazut un profesor asa tanar. </li>
+                        <li value="normal">
+                            <random>
+                                <li>
+                                    <condition name="prof_normal_1-a">
+                                        <li value="false">
+                                            De cat timp esti profesor?
+                                            <think>
+                                                <set name="current-question">prof_normal_1</set>
+                                            </think>
+                                            <think>
+                                                <set name="prof_normal_1-a">true</set>
+                                            </think>
+                                        </li>
+                                    </condition>
+                                </li>
+                                <li>
+                                    <condition name="prof_normal_2-a">
+                                        <li value="false">
+                                            Ce grad ai?
+                                            <think>
+                                                <set name="current-question">prof_normal_2</set>
+                                            </think>
+                                            <think>
+                                                <set name="prof_normal_2-a">true</set>
+                                            </think>
+                                        </li>
+                                    </condition>
+                                </li>
+                                <li>
+                                    <condition name="prof_normal_3-a">
+                                        <li value="false">
+                                            Ce materie predai?
+                                            <think>
+                                                <set name="current-question">prof_normal_3</set>
+                                            </think>
+                                            <think>
+                                                <set name="prof_normal_3-a">true</set>
+                                            </think>
+                                        </li>
+                                    </condition>
+                                </li>
+                                <li>
+                                    <condition name="prof_normal_4-a">
+                                        <li value="false">
+                                            Unde iti profesezi meseria?
+                                            <think>
+                                                <set name="current-question">prof_normal_4</set>
+                                            </think>
+                                            <think>
+                                                <set name="prof_normal_4-a">true</set>
+                                            </think>
+                                        </li>
+                                    </condition>
+                                </li>
+                                <li>
+                                    <condition name="prof_normal_5-a">
+                                        <li value="false">
+                                            Vrei sa faci asta tot restul vietii?
+                                            <think>
+                                                <set name="current-question">prof_normal_5</set>
+                                            </think>
+                                            <think>
+                                                <set name="prof_normal_5-a">true</set>
+                                            </think>
+                                        </li>
+                                    </condition>
+                                </li>
+                            </random>
+                        </li>
+
+                        <li value="batran">
+                            <random>
+                                <li>
+                                    <condition name="prof_bat_1-a">
+                                        <li value="false">
+                                            De cati ani lucrezi in acest domeniu?
+                                            <think>
+                                                <set name="current-question">prof_bat_1</set>
+                                            </think>
+                                            <think>
+                                                <set name="prof_bat_1-a">true</set>
+                                            </think>
+                                        </li>
+                                    </condition>
+                                </li>
+                                <li>
+                                    <condition name="prof_bat_2-a">
+                                        <li value="false">
+                                            Ce materie predai?
+                                            <think>
+                                                <set name="current-question">prof_bat_2</set>
+                                            </think>
+                                            <think>
+                                                <set name="prof_bat_2-a">true</set>
+                                            </think>
+                                        </li>
+                                    </condition>
+                                </li>
+                                <li>
+                                    <condition name="prof_bat_3-a">
+                                        <li value="false">
+                                            Faci meditatii cu cei care au nevoie?
+                                            <think>
+                                                <set name="current-question">prof_bat_3</set>
+                                            </think>
+                                            <think>
+                                                <set name="prof_bat_3-a">true</set>
+                                            </think>
+                                        </li>
+                                    </condition>
+                                </li>
+                                <li>
+                                    <condition name="prof_bat_4-a">
+                                        <li value="false">
+                                            Este satisfacator salariul?
+                                            <think>
+                                                <set name="current-question">prof_bat_4</set>
+                                            </think>
+                                            <think>
+                                                <set name="prof_bat_4-a">true</set>
+                                            </think>
+                                        </li>
+                                    </condition>
+                                </li>
+                                <li>
+                                    <condition name="prof_bat_5-a">
+                                        <li value="false">
+                                            Ai intemeiata o familie?
+                                            <think>
+                                                <set name="current-question">prof_bat_5</set>
+                                            </think>
+                                            <think>
+                                                <set name="prof_bat_5-a">true</set>
+                                            </think>
+                                        </li>
+                                    </condition>
+                                </li>
+                            </random>
+                        </li>
+                    </condition>
+                </li>
+
+                <li value = "student">
+                    <condition name="age_label">
+                        <li value="normal">
+                            <random>
+                                <li>
+                                    <condition name="stud_normal_1-a">
+                                        <li value="false">
+                                            La ce facultate esti?
+                                            <think>
+                                                <set name="current-question">stud_normal_1</set>
+                                            </think>
+                                            <think>
+                                                <set name="stud_normal_1-a">true</set>
+                                            </think>
+                                        </li>
+                                    </condition>
+                                </li>
+                                <li>
+                                    <condition name="stud_normal_2-a">
+                                        <li value="false">
+                                            In ce an esti la facultate?
+                                            <think>
+                                                <set name="current-question">stud_normal_2</set>
+                                            </think>
+                                            <think>
+                                                <set name="stud_normal_2-a">true</set>
+                                            </think>
+                                        </li>
+                                    </condition>
+                                </li>
+                                <li>
+                                    <condition name="stud_normal_3-a">
+                                        <li value="false">
+                                            Ce vrei sa faci dupa ce termini facultatea?
+                                            <think>
+                                                <set name="current-question">stud_normal_3</set>
+                                            </think>
+                                            <think>
+                                                <set name="stud_normal_3-a">true</set>
+                                            </think>
+                                        </li>
+                                    </condition>
+                                </li>
+                                <li>
+                                    <condition name="stud_normal_4-a">
+                                        <li value="false">
+                                            Ai restante?
+                                            <think>
+                                                <set name="current-question">stud_normal_4</set>
+                                            </think>
+                                            <think>
+                                                <set name="stud_normal_4-a">true</set>
+                                            </think>
+                                        </li>
+                                    </condition>
+                                </li>
+                                <li>
+                                    <condition name="stud_normal_5-a">
+                                        <li value="false">
+                                            Stai la camin?
+                                            <think>
+                                                <set name="current-question">stud_normal_5</set>
+                                            </think>
+                                            <think>
+                                                <set name="stud_normal_5-a">true</set>
+                                            </think>
+                                        </li>
+                                    </condition>
+                                </li>
+                            </random>
+                        </li>
+                        <li value="batran">
+                            <random>
+                                <li>
+                                    <condition name="stud_bat_1-a">
+                                        <li value="false">
+                                            Ai si un job in paralel cu facultatea?
+                                            <think>
+                                                <set name="current-question">stud_bat_1</set>
+                                            </think>
+                                            <think>
+                                                <set name="stud_bat_1-a">true</set>
+                                            </think>
+                                        </li>
+                                    </condition>
+                                </li>
+                                <li>
+                                    <condition name="stud_bat_2-a">
+                                        <li value="false">
+                                            Ce faculate faci?
+                                            <think>
+                                                <set name="current-question">stud_bat_2</set>
+                                            </think>
+                                            <think>
+                                                <set name="stud_bat_2-a">true</set>
+                                            </think>
+                                        </li>
+                                    </condition>
+                                </li>
+                                <li>
+                                    <condition name="stud_bat_3-a">
+                                        <li value="false">
+                                            In ce an esti la facultate?
+                                            <think>
+                                                <set name="current-question">stud_bat_3</set>
+                                            </think>
+                                            <think>
+                                                <set name="stud_bat_3-a">true</set>
+                                            </think>
+                                        </li>
+                                    </condition>
+                                </li>
+                                <li>
+                                    <condition name="stud_bat_4-a">
+                                        <li value="false">
+                                            Primesti bursa?
+                                            <think>
+                                                <set name="current-question">stud_bat_4</set>
+                                            </think>
+                                            <think>
+                                                <set name="stud_bat_4-a">true</set>
+                                            </think>
+                                        </li>
+                                    </condition>
+                                </li>
+                                <li>
+                                    <condition name="stud_bat_5-a">
+                                        <li value="false">
+                                            Unde stai?
+                                            <think>
+                                                <set name="current-question">stud_bat_5</set>
+                                            </think>
+                                            <think>
+                                                <set name="stud_bat_5-a">true</set>
+                                            </think>
+                                        </li>
+                                    </condition>
+                                </li>
+                            </random>
+                        </li>
+                    </condition>
+                </li>
+
+                <li value = "elev">
+                    <condition name="age_label">
+                        <li value="tanar">
+                            <random>
+                                <li>
+                                    <condition name="elev_tan_1-a">
+                                        <li value="false">
+                                            Unde inveti?
+                                            <think>
+                                                <set name="current-question">elev_tan_1</set>
+                                            </think>
+                                            <think>
+                                                <set name="elev_tan_1-a">true</set>
+                                            </think>
+                                        </li>
+                                    </condition>
+                                </li>
+                                <li>
+                                    <condition name="elev_tan_2-a">
+                                        <li value="false">
+                                            Care este materia ta preferata?
+                                            <think>
+                                                <set name="current-question">elev_tan_2</set>
+                                            </think>
+                                            <think>
+                                                <set name="elev_tan_2-a">true</set>
+                                            </think>
+                                        </li>
+                                    </condition>
+                                </li>
+                                <li>
+                                    <condition name="elev_tan_3-a">
+                                        <li value="false">
+                                            Ce meserie vrei sa ai?
+                                            <think>
+                                                <set name="current-question">elev_tan_3</set>
+                                            </think>
+                                            <think>
+                                                <set name="elev_tan_3-a">true</set>
+                                            </think>
+                                        </li>
+                                    </condition>
+                                </li>
+                                <li>
+                                    <condition name="elev_tan_4-a">
+                                        <li value="false">
+                                            Mai ai vreun frate sau sora?
+                                            <think>
+                                                <set name="current-question">elev_tan_4</set>
+                                            </think>
+                                            <think>
+                                                <set name="elev_tan_4-a">true</set>
+                                            </think>
+                                        </li>
+                                    </condition>
+                                </li>
+                                <li>
+                                    <condition name="elev_tan_5-a">
+                                        <li value="false">
+                                            Care este melodia ta preferata?
+                                            <think>
+                                                <set name="current-question">elev_tan_5</set>
+                                            </think>
+                                            <think>
+                                                <set name="elev_tan_5-a">true</set>
+                                            </think>
+                                        </li>
+                                    </condition>
+                                </li>
+                            </random>
+                        </li>
+                    </condition>
+                </li>
+            </condition>
+        </template>
+    </category>
+
+
+    <category>
+        <pattern> DA </pattern>
+        <template>
+            <condition name="current-question">
+                <li value="prog_normal_1">
+                    Foarte tare! Si bani si carte.
+                    <think>
+                        <set name="prog_normal_1-a-v">DA</set>
+                    </think>
+                </li>
+                <li value="prog_normal_3">
+                    Sper sa fii un antreprenor de succes.
+                    <think>
+                        <set name="prog_normal_3-a-v">DA</set>
+                    </think>
+                </li>
+                <li value="prog_normal_5">
+                    Se fac bani seriosi acolo!
+                    <think>
+                        <set name="prog_normal_5-a-v">DA</set>
+                    </think>
+                </li>
+
+                <li value="prog_bat_1">
+                    Super, esti propriul tau sef!
+                    <think>
+                        <set name="prog_bat_1-a-v">DA</set>
+                    </think>
+                </li>
+                <li value="prog_bat_2">
+                    Si eu sunt de aceeasi parere.
+                    <think>
+                        <set name="prog_bat_2-a-v">DA</set>
+                    </think>
+                </li>
+
+                <li value="prof_normal_5">
+                    Foarte bine, e minunat sa fii profesor.
+                    <think>
+                        <set name="prof_normal_5-a-v">DA</set>
+                    </think>
+                </li>
+
+                <li value="prof_bat_3">
+                    Foarte bine ca ii ajuti pe cei care au nevoie.
+                    <think>
+                        <set name="prof_bat_3-a-v">DA</set>
+                    </think>
+                </li>
+                <li value="prof_bat_4">
+                    Inseamna ca iti poti lua multe lucruri.
+                    <think>
+                        <set name="prof_bat_4-a-v">DA</set>
+                    </think>
+                </li>
+                <li value="prof_bat_5">
+                    Succes si pe plan profesional si pe plan personal, bravo!
+                    <think>
+                        <set name="prof_bat_5-a-v">DA</set>
+                    </think>
+                </li>
+
+                <li value="stud_normal_4">
+                    Ai face bine sa inveti mai mult.
+                    <think>
+                        <set name="stud_normal_4-a-v">DA</set>
+                    </think>
+                </li>
+                <li value="stud_normal_5">
+                    E super viata la camin.
+                    <think>
+                        <set name="stud_normal_5">DA</set>
+                    </think>
+                </li>
+
+                <li value="stud_bat_1">
+                    Si bani si carte, nu-i rau deloc!
+                    <think>
+                        <set name="stud_bat_1-a-v">DA</set>
+                    </think>
+                </li>
+                <li value="stud_bat_4">
+                    Acesti bani sunt meritul muncii tale.
+                    <think>
+                        <set name="stud_bat_4-a-v">DA</set>
+                    </think>
+                </li>
+
+                <li value="elev_tan_4">
+                    Super, sa va ajutati mereu!
+                    <think>
+                        <set name="elev_tan_4-a-v">DA</set>
+                    </think>
+                </li>
+            </condition>
+        </template>
+    </category>
+
+    <category>
+        <pattern> NU </pattern>
+        <template>
+            <condition name="current-question">
+                <li value="prog_normal_1">
+                    Ai suficient timp si dupa sa lucrezi.
+                    <think>
+                        <set name="prog_normal_1-a-v">NU</set>
+                    </think>
+                </li>
+                <li value="prog_normal_3">
+                    E ok, nu toti sunt facuti sa fie antreprenori.
+                    <think>
+                        <set name="prog_normal_3-a-v">NU</set>
+                    </think>
+                </li>
+                <li value="prog_normal_5">
+                    Se fac bani frumosi si aici!
+                    <think>
+                        <set name="prog_normal_5-a-v">NU</set>
+                    </think>
+                </li>
+
+                <li value="prog_bat_1">
+                    Oricand poti deveni un mic antreprenor cu o idee buna!
+                <think>
+                        <set name="prog_bat_1-a-v">NU</set>
+                    </think>
+                </li>
+                <li value="prog_bat_5">
+                    Si eu sunt de aceeasi parere.
+                    <think>
+                        <set name="prog_bat_5-a-v">NU</set>
+                    </think>
+                </li>
+
+                <li value="prof_normal_5">
+                    Pacat, elevii au nevoie de un profesor asa bun.
+                    <think>
+                        <set name="prof_normal_5-a-v">NU</set>
+                    </think>
+                </li>
+
+                <li value="prof_bat_3">
+                    Poate ar trebui sa incerci.
+                    <think>
+                        <set name="prof_bat_3-a-v">NU</set>
+                    </think>
+                </li>
+                <li value="prof_bat_4">
+                    Poate in viitor va fi mai bun.
+                    <think>
+                        <set name="prof_bat_4-a-v">NU</set>
+                    </think>
+                </li>
+                <li value="prof_bat_5">
+                    Este timp si de acum.
+                    <think>
+                        <set name="prof_bat_5-a-v">NU</set>
+                    </think>
+                </li>
+
+                <li value="stud_normal_4">
+                    Un student model, bravo!
+                    <think>
+                        <set name="stud_normal_4-a-v">NU</set>
+                    </think>
+                </li>
+                <li value="stud_normal_5">
+                    Ar trebui sa incerci, am auzit ca e frumos.
+                    <think>
+                        <set name="stud_normal_5-a-v">NU</set>
+                    </think>
+                </li>
+
+                <li value="stud_bat_1">
+                    Ar fi cazul sa faci si un banut.
+                    <think>
+                        <set name="stud_bat_1-a-v">NU</set>
+                    </think>
+                </li>
+                <li value="stud_bat_4">
+                    Invata mai mult si vei lua.
+                    <think>
+                        <set name="stud_bat_4-a-v">NU</set>
+                    </think>
+                </li>
+
+                <li value="evel_tan_4">
+                    Niciodata nu e prea tarziu.
+                    <think>
+                        <set name="elev_tan_4-a-v">NU</set>
+                    </think>
+                </li>
+            </condition>
+        </template>
+    </category>
+
+
+    <category>
+        <pattern> * </pattern>
+        <template>
+            <condition name="current-question">
+                <li value="prog_normal_2">
+                    Si a mea.
+                    <think>
+                        <set name="prog_normal_2"><star/></set>
+                    </think>
+                </li>
+                <li value="prog_normal_4"> Stiu ca e o companie buna. </li>
+
+                <li value="prog_bat_2"> Nu-i rau, sunt cativa ani. </li>
+                <li value="prog_bat_3"> Asta e si preferata mea. </li>
+                <li value="prog_bat_4"> Am auzit numai lucruri bune despre ea. </li>
+
+                <li value="prof_normal_1"> Nu-i rau, sunt cativa ani. </li>
+                <li value="prof_normal_2"> Nu-i rau! </li>
+                <li value="prof_normal_3"> Super, e materia mea preferata! </li>
+                <li value="prof_normal_4"> Am auzit ca e un loc foarte bun. </li>
+
+                <li value="prof_bat_1"> Ai ceva experienta. </li>
+                <li value="prof_bat_2"> E materia mea preferata. </li>
+
+                <li value="stud_normal_1"> E o facultate buna. </li>
+                <li value="stud_normal_2"> Felicitari! </li>
+                <li value="stud_normal_3"> Grozav plan! </li>
+
+                <li value="stud_bat_2"> E o facultate buna. </li>
+                <li value="stud_bat_3"> Felicitari! </li>
+                <li value="stud_bat_5"> Nu-i rau! </li>
+
+                <li value="evel_tan_1"> Am auzit ca e foarte frumos acolo. </li>
+                <li value="evel_tan_2"> Asta e si materia mea preferata. </li>
+                <li value="evel_tan_3"> Mult succes! </li>
+                <li value="evel_tan_5"> Si eu o ascult mereu. </li>
+            </condition>
+        </template>
+    </category>
+
+</aiml>

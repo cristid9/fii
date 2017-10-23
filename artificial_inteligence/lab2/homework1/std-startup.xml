@@ -1,0 +1,12 @@
+<aiml version="1.0.1" encoding="UTF-8">
+    <category>
+
+        <pattern>LOAD AIML B</pattern>
+
+        <template>
+            <learn>/home/cristi/fii2/ai/basic_chat.aiml</learn>
+
+        </template>
+
+    </category>
+</aiml>

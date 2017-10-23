@@ -1,0 +1,73 @@
+<aiml version="2.0" encoding="UTF-8">
+
+    <category>
+        <pattern>_ LUCREZ</pattern>
+        <template>
+            <get name="job"/>, asta esti tu!
+        </template>
+    </category>
+
+    <category>
+        <pattern>_ CHEAMA</pattern>
+        <template>
+            <get name="name"/>, ce-i cu tine?
+        </template>
+    </category>
+
+    <category>
+        <pattern>_ ANI _</pattern>
+        <template>
+            <get name="age"/>, ai uitat?
+        </template>
+    </category>
+
+    <category>
+        <pattern>_ TEHNOLOGIE _</pattern>
+        <template>
+            <get name="prog_normal_2-a-v"/>, ai uitat?
+        </template>
+    </category>
+
+    <category>
+        <pattern>_ AFACERE</pattern>
+        <template>
+            Din cate stiu eu, <get name="prog_normal_3-a-v"/>!
+        </template>
+    </category>
+
+    <category>
+        <pattern>_ DOMENIU</pattern>
+        <template>
+            Parca, <get name="prog_bat_2-a-v"/>, nu?
+        </template>
+    </category>
+
+    <category>
+        <pattern>_ FACULTA*</pattern>
+        <template>
+            Parca, <get name="prog_normal_1-a-v"/>
+        </template>
+    </category>
+
+    <category>
+        <pattern>_ SUNT _</pattern>
+        <template>
+            Parca <get name="job"/>
+        </template>
+    </category>
+
+    <category>
+        <pattern>_ SUNT</pattern>
+        <template>
+            Parca, <get name="job"/>
+        </template>
+    </category>
+
+    <category>
+        <pattern>SUPER</pattern>
+        <template>
+            Normal, <get name="name"/>
+        </template>
+    </category>
+
+</aiml>

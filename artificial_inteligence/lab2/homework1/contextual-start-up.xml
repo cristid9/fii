@@ -1,0 +1,8 @@
+<aiml version="1.0.1" encoding="UTF-8">
+    <category>
+        <pattern>LOAD AIML C</pattern>
+        <template>
+            <learn>/home/cristi/fii2/ai/user_questions.aiml</learn>
+        </template>
+    </category>
+</aiml>
