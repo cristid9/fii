@@ -9,11 +9,13 @@ Lab 3
 `SI`, `SF`, `(m, 3, 3, 3)`
 3. Validare de tranzitii
 4. Strategii
-  * Random
-  * Hill Climbing
-  * Backtracking
-  * `A*`
+    * Random
+    * Hill Climbing
+    * Backtracking
+    * `A*`
 
+Pseudocoduri
+------------
 ```C
 strategie_BKT(sc) {
 	for i = 1 .. n
