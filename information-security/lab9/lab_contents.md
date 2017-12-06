@@ -12,4 +12,4 @@ head -c 1600 /dev/urandom | hexdump
 
 Exercitii
 =========
-* cripttat `ubuntu.bmp` cu `cbc` si `ecb`
+* criptat `ubuntu.bmp` cu `cbc` si `ecb`
